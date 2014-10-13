@@ -4,9 +4,12 @@ import states
 
 
 class Lion(object):
-    def __init__(self):
-        self.state = states.HungryState()
-        self.reaction = 'born'
+    def __init__(self, state=states.HungryState()):
+        if state.__class__.__base__ is states.State:
+            self.state = state
+            self.reaction = 'sleep'
+        else:
+            raise Exception("Lion cannot take this state")
 
     def meet(self, company):
         # self.state = self.state.conversate(company)
