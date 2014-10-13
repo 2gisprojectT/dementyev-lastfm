@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://secure.last.fm/" />
+<title>wrong_login_test</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">wrong_login_test</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/login?lang=ru&amp;backto=http%3A%2F%2Fwww.lastfm.ru%2Flogin%2FsuccessCallback%3Furl%3Dhttp%253A%252F%252Fwww.lastfm.ru%252Fsearch%253Fq%253Dhgsv%2526from%253Dac%2526setlang%253Dru&amp;withsid&amp;s=0&amp;r=0&amp;joinurl=http%3A%2F%2Fwww.lastfm.ru%2Fsearch%3Fq%3Dhgsv%26from%3Dac%26setlang%3Dru</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=login-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=username</td>
+	<td>takinyash</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=password</td>
+	<td>hwlloeorld</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td></td>
+	<td>Неверно, повторить попытку? Если пароль утерян, его можно сбросить по этой ссылке.</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
