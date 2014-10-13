@@ -5,7 +5,7 @@ import states
 
 class Lion(object):
     def __init__(self, state=states.HungryState()):
-        if state.__class__.__base__ is states.State:
+        if state.__class__ and state.__class__.__base__ is states.State:
             self.state = state
             self.reaction = 'sleep'
         else:

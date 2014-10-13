@@ -26,6 +26,8 @@ class TestLion(TestCase):
     def test_lion_incorrect_init(self):
         self.assertRaises(Exception, Lion.__init__, "string")
         self.assertRaises(Exception, Lion.__init__, 1)
+        self.assertRaises(Exception, Lion.__init__, states.State())
+        self.assertRaises(Exception, Lion.__init__, states.State)
 
     def test_raise_to_wrong_company(self):
         lion = Lion()
