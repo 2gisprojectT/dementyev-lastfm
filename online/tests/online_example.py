@@ -8,7 +8,7 @@ from online.helpers.page import Page
 
 
 class SeleniumTest(TestCase):
-    def block_test_search(self):
+    def test_search(self):
         driver = webdriver.Firefox()
         page = Page(driver)
 
@@ -17,7 +17,7 @@ class SeleniumTest(TestCase):
         test_query = u'кафе'
         page.search_bar.search(test_query)
 
-        page.open(page.extras_result.extract())
+        page.open(page.extras_bar.extract())
         self.assertEqual(test_query, page.search_bar.query())
 
         driver.close()
@@ -32,10 +32,10 @@ class SeleniumTest(TestCase):
         query_to = u'золотая нива'
 
         driver.implicitly_wait(10)
-        page.route_result.search(query_from, query_to)
+        page.route_bar.search(query_from, query_to)
 
         driver.implicitly_wait(10)
-        self.assertTrue(page.route_result.result())
+        self.assertTrue(page.route_bar.result())
 
         driver.close()
 
